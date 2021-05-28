@@ -168,12 +168,12 @@ def get_data(url):
       })
       print('я внутри 2го цикла')
 
-    iteration_count -= 1 #каждую итерацию уменьшается на 1 
+    iteration_count -= 1 
     print(f'итерация #{item} завершена, осталось итераций #{iteration_count}')
     if iteration_count ==0:
       print("сбор данных завершён")
 
-    time.sleep(random.randrange(3,5)) # в краппинге часто работает поговорка "тише едешь, альше будешь"
+    time.sleep(random.randrange(3,5)) # "тише едешь, дальше будешь"
   with open ('data/project_data.json', 'a', encoding='utf-8') as file:  # 'a'  - значит что данные будут дополняться ,а не перезаписываться. т.е. старые данные не удаляются
     json.dump(houses, file, indent=4, ensure_ascii=False)
   # print(len(items))
